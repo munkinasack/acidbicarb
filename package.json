@@ -1,5 +1,5 @@
 {
-  "name": "svelte-app",
+  "name": "acid-bicarb",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -18,6 +18,8 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
-    "sirv-cli": "^1.0.0"
-  }
+    "svelte": "3.44.3"
+  },
+  "keywords": [],
+  "description": ""
 }

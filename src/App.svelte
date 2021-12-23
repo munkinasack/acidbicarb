@@ -111,7 +111,7 @@
 
 	.width-restriction {
 	  display: flex;
-	  justify-content: space-between;
+	  justify-content: center;
 	  align-items: center;
 	}
 </style>

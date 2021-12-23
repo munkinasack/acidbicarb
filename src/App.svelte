@@ -19,6 +19,8 @@
 	$: bicarbExpireDate = `${bicarbMonth}/${bicarbDay}/${bicarbYear}`;
 </script>
 
+<div class="width-restrictoin">
+<div>
 <Hoverable let:hovering={activeAcid}>
 	<input class:activeAcid id='acid' bind:this={focusInput} bind:value={qrCodeAcid} placeholder="Scan Acid QR Code Here">
 </Hoverable>
@@ -37,7 +39,8 @@
 	</p>
 </BoxAcid>
 {/if}
-
+</div>
+<div>
 <Hoverable let:hover={activeBicarb}>
 	<input class:activeBicarb id='bicarb' bind:value={qrCodeBicarb} placeholder="Scan Bicarb QR Code Here">
 </Hoverable>
@@ -56,6 +59,8 @@
 	</p>
 </BoxBicarb>
 {/if}
+</div>
+</div>
 
 <style>
 	#acid {
@@ -98,5 +103,11 @@
 	.activeBicarb {
 	  background-color: #3498db;
 	  color: white;
+	}
+
+	.width-restriction {
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
 	}
 </style>

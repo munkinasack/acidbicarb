@@ -18,8 +18,8 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
-    "carbon-components-svelte": "0.50.2",
-    "svelte": "3.44.3"
+    "svelte": "3.44.3",
+    "svelte-copy-to-clipboard": "0.2.5"
   },
   "keywords": [],
   "description": ""

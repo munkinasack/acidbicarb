@@ -3,7 +3,7 @@
 	import BoxAcid from "./BoxAcid.svelte";
 	import BoxBicarb from "./BoxBicarb.svelte";
 	import { onMount } from "svelte";
-	import { CopyButton } from "carbon-components-svelte";
+	import CopyToClipboard from "svelte-copy-to-clipboard";
 	let qrCodeBicarb = "";
 	let qrCodeAcid = "";
 	let focusInput;
@@ -27,16 +27,30 @@
 		</Hoverable>
 
 		{#if qrCodeAcid.length > 0}
-			<pr>Lot Number:</pr>
+			<pr>
+				Lot Number: 
+				<CopyToClipboard text={acidLotNumber} let:copy>
+      		<button on:click={copy}>
+						Copy
+					</button>
+				</CopyToClipboard>
+			</pr>
 			<BoxAcid>
 				<p>
-					{acidLotNumber}<CopyButton text={acidLotNumber} />
+					{acidLotNumber}
 				</p>
 			</BoxAcid>
-			<pr>Expiration Date</pr>
+			<pr>
+				Expiration Date:
+				<CopyToClipboard text={acidExpireDate} let:copy>
+      		<button on:click={copy}>
+						Copy
+					</button>
+				</CopyToClipboard>
+			</pr>
 			<BoxAcid>
 				<p>
-					{acidExpireDate}<CopyButton text={acidExpireDate} />
+					{acidExpireDate}
 				</p>
 			</BoxAcid>
 		{/if}
@@ -49,18 +63,28 @@
 		{#if qrCodeBicarb.length > 0}
 			<pr>
 				Lot Number:
+				<CopyToClipboard text={bicarbLotNumber} let:copy>
+      		<button on:click={copy}>
+						Copy
+					</button>
+				</CopyToClipboard>
 			</pr>
 			<BoxBicarb>
 				<p>
-					{bicarbLotNumber}<CopyButton text={bicarbLotNumber} />
+					{bicarbLotNumber}
 				</p>
 			</BoxBicarb>
 			<pr>
-				Expiration Date
+				Expiration Date:
+				<CopyToClipboard text={bicarbExpireDate} let:copy>
+      		<button on:click={copy}>
+						Copy
+					</button>
+				</CopyToClipboard>
 			</pr>
 			<BoxBicarb>
 				<p>
-					{bicarbExpireDate}<CopyButton text={bicarbExpireDate} />
+					{bicarbExpireDate}
 				</p>
 			</BoxBicarb>
 		{/if}

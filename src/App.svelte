@@ -30,7 +30,7 @@
 			<pr>
 				Lot Number: 
 				<CopyToClipboard text={acidLotNumber} let:copy>
-      		<button on:click={copy}>
+      		<button class="smallButton" on:click={copy}>
 						Copy
 					</button>
 				</CopyToClipboard>
@@ -43,7 +43,7 @@
 			<pr>
 				Expiration Date:
 				<CopyToClipboard text={acidExpireDate} let:copy>
-      		<button on:click={copy}>
+      		<button class="smallButton" on:click={copy}>
 						Copy
 					</button>
 				</CopyToClipboard>
@@ -64,7 +64,7 @@
 			<pr>
 				Lot Number:
 				<CopyToClipboard text={bicarbLotNumber} let:copy>
-      		<button on:click={copy}>
+      		<button class="smallButton" on:click={copy}>
 						Copy
 					</button>
 				</CopyToClipboard>
@@ -77,7 +77,7 @@
 			<pr>
 				Expiration Date:
 				<CopyToClipboard text={bicarbExpireDate} let:copy>
-      		<button on:click={copy}>
+      		<button class="smallButton" on:click={copy}>
 						Copy
 					</button>
 				</CopyToClipboard>
@@ -138,5 +138,9 @@
 	  display: flex;
 	  justify-content: center;
 	  align-items: center;
+	}
+
+	.smallButton {
+	  padding: 1px 6px;
 	}
 </style>

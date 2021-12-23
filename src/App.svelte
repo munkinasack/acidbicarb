@@ -1,6 +1,7 @@
 <script>
 	import Hoverable from './Hoverable.svelte';
-	import Box from './Box.svelte';
+	import BoxAcid from './BoxAcid.svelte';
+	import BoxBicarb from './BixBicarb.svelte';
 	let qrCodeBicarb = '';
 	let qrCodeAcid = '';
 	$:acidMonth = qrCodeAcid.substring(20,22);
@@ -21,17 +22,17 @@
 
 {#if qrCodeAcid.length > 0}
 <pr>Lot Number:</pr>
-<Box>
+<BoxAcid>
 	<p>
 		{acidLotNumber}
 	</p>
-</Box>
+</BoxAcid>
 <pr>Expiration Date</pr>
-<Box>
+<BoxAcid>
 	<p>
 		{acidExpireDate}
 	</p>
-</Box>
+</BoxAcid>
 {/if}
 
 <Hoverable let:hover={activeBicarb}>
@@ -40,17 +41,17 @@
 
 {#if qrCodeBicarb.length > 0}
 <pr>Lot Number:</pr>
-<Box>
+<BoxBicarb>
 	<p>
 		{bicarbLotNumber}
 	</p>
-</Box>
+</BoxBicarb>
 <pr>Expiration Date</pr>
-<Box>
+<BoxBicarb>
 	<p>
 		{bicarbExpireDate}
 	</p>
-</Box>
+</BoxBicarb>
 {/if}
 
 <style>

@@ -30,13 +30,13 @@
 			<pr>Lot Number:</pr>
 			<BoxAcid>
 				<p>
-					{acidLotNumber}<CopyButton text={acidLotNumber} feedback="Copied" />
+					{acidLotNumber}<CopyButton text={acidLotNumber} />
 				</p>
 			</BoxAcid>
 			<pr>Expiration Date</pr>
 			<BoxAcid>
 				<p>
-					{acidExpireDate}<CopyButton text={acidExpireDate} feedback="Copied" />
+					{acidExpireDate}<CopyButton text={acidExpireDate} />
 				</p>
 			</BoxAcid>
 		{/if}
@@ -52,7 +52,7 @@
 			</pr>
 			<BoxBicarb>
 				<p>
-					{bicarbLotNumber}<CopyButton text={bicarbLotNumber} feedback="Copied" />
+					{bicarbLotNumber}<CopyButton text={bicarbLotNumber} />
 				</p>
 			</BoxBicarb>
 			<pr>
@@ -60,7 +60,7 @@
 			</pr>
 			<BoxBicarb>
 				<p>
-					{bicarbExpireDate}<CopyButton text={bicarbExpireDate} feedback="Copied" />
+					{bicarbExpireDate}<CopyButton text={bicarbExpireDate} />
 				</p>
 			</BoxBicarb>
 		{/if}

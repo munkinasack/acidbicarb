@@ -1,19 +1,19 @@
 <script>
-	import Hoverable from './Hoverable.svelte';
-	import BoxAcid from './BoxAcid.svelte';
-	import BoxBicarb from './BixBicarb.svelte';
-	let qrCodeBicarb = '';
-	let qrCodeAcid = '';
-	$:acidMonth = qrCodeAcid.substring(20,22);
-	$:acidDay = qrCodeAcid.substring(22,24);
-	$:acidYear = 20 + qrCodeAcid.substring(18,20);
-	$:acidLotNumber = qrCodeAcid.substring(26);
-	$:acidExpireDate = `${acidMonth}/${acidDay}/${acidYear}`;
-	$:bicarbMonth = qrCodeBicarb.substring(28,30);
-	$:bicarbDay = qrCodeBicarb.substring(30,32);
-	$:bicarbYear = 20 + qrCodeBicarb.substring(26,28);
-	$:bicarbLotNumber = qrCodeBicarb.substring(34);
-	$:bicarbExpireDate = `${bicarbMonth}/${bicarbDay}/${bicarbYear}`
+	import Hoverable from "./Hoverable.svelte";
+	import BoxAcid from "./BoxAcid.svelte";
+	import BoxBicarb from "./BoxBicarb.svelte";
+	let qrCodeBicarb = "";
+	let qrCodeAcid = "";
+	$: acidMonth = qrCodeAcid.substring(20, 22);
+	$: acidDay = qrCodeAcid.substring(22, 24);
+	$: acidYear = 20 + qrCodeAcid.substring(18, 20);
+	$: acidLotNumber = qrCodeAcid.substring(26);
+	$: acidExpireDate = `${acidMonth}/${acidDay}/${acidYear}`;
+	$: bicarbMonth = qrCodeBicarb.substring(28, 30);
+	$: bicarbDay = qrCodeBicarb.substring(30, 32);
+	$: bicarbYear = 20 + qrCodeBicarb.substring(26, 28);
+	$: bicarbLotNumber = qrCodeBicarb.substring(34);
+	$: bicarbExpireDate = `${bicarbMonth}/${bicarbDay}/${bicarbYear}`;
 </script>
 
 <Hoverable let:hovering={activeAcid}>
@@ -56,41 +56,44 @@
 
 <style>
 	#acid {
-		width: 300px;
-		padding: 1em;
-		margin: 0 0 1em 0;
-		background-color: #EC7063;
-		color: white;
+	  width: 300px;
+	  padding: 1em;
+	  margin: 0 0 1em 0;
+	  background-color: #ec7063;
+	  color: white;
 	}
-	
-	#bicarb {
-		width: 300px;
-		padding: 1em;
-		margin: 0 0 1em 0;
-		background-color: #5DADE2;
-		color: white;
-	}
-	
-	::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: white;
-  opacity: 1; /* Firefox */
-}
-	
-	:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: white;
-}
 
-::-ms-input-placeholder { /* Microsoft Edge */
-  color: white;
-}
+	#bicarb {
+	  width: 300px;
+	  padding: 1em;
+	  margin: 0 0 1em 0;
+	  background-color: #5dade2;
+	  color: white;
+	}
+
+	::placeholder {
+	  /* Chrome, Firefox, Opera, Safari 10.1+ */
+	  color: white;
+	  opacity: 1; /* Firefox */
+	}
+
+	:-ms-input-placeholder {
+	  /* Internet Explorer 10-11 */
+	  color: white;
+	}
+
+	::-ms-input-placeholder {
+	  /* Microsoft Edge */
+	  color: white;
+	}
 
 	.activeAcid {
-		background-color: #E74C3C;
-		color: white;
+	  background-color: #e74c3c;
+	  color: white;
 	}
-	
+
 	.activeBicarb {
-		background-color: #3498DB;
-		color: white;
+	  background-color: #3498db;
+	  color: white;
 	}
 </style>

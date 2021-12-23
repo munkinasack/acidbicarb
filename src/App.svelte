@@ -19,47 +19,51 @@
 	$: bicarbExpireDate = `${bicarbMonth}/${bicarbDay}/${bicarbYear}`;
 </script>
 
-<div class="width-restrictoin">
-<div>
-<Hoverable let:hovering={activeAcid}>
-	<input class:activeAcid id='acid' bind:this={focusInput} bind:value={qrCodeAcid} placeholder="Scan Acid QR Code Here">
-</Hoverable>
+<div class="width-restriction">
+	<div>
+		<Hoverable let:hovering={activeAcid}>
+			<input class:activeAcid id='acid' bind:this={focusInput} bind:value={qrCodeAcid} placeholder="Scan Acid QR Code Here">
+		</Hoverable>
 
-{#if qrCodeAcid.length > 0}
-<pr>Lot Number:</pr>
-<BoxAcid>
-	<p>
-		{acidLotNumber}
-	</p>
-</BoxAcid>
-<pr>Expiration Date</pr>
-<BoxAcid>
-	<p>
-		{acidExpireDate}
-	</p>
-</BoxAcid>
-{/if}
-</div>
-<div>
-<Hoverable let:hover={activeBicarb}>
-	<input class:activeBicarb id='bicarb' bind:value={qrCodeBicarb} placeholder="Scan Bicarb QR Code Here">
-</Hoverable>
+		{#if qrCodeAcid.length > 0}
+			<pr>Lot Number:</pr>
+			<BoxAcid>
+				<p>
+					{acidLotNumber}
+				</p>
+			</BoxAcid>
+			<pr>Expiration Date</pr>
+			<BoxAcid>
+				<p>
+					{acidExpireDate}
+				</p>
+			</BoxAcid>
+		{/if}
+	</div>
+	<div>
+		<Hoverable let:hover={activeBicarb}>
+			<input class:activeBicarb id='bicarb' bind:value={qrCodeBicarb} placeholder="Scan Bicarb QR Code Here">
+		</Hoverable>
 
-{#if qrCodeBicarb.length > 0}
-<pr>Lot Number:</pr>
-<BoxBicarb>
-	<p>
-		{bicarbLotNumber}
-	</p>
-</BoxBicarb>
-<pr>Expiration Date</pr>
-<BoxBicarb>
-	<p>
-		{bicarbExpireDate}
-	</p>
-</BoxBicarb>
-{/if}
-</div>
+		{#if qrCodeBicarb.length > 0}
+			<pr>
+				Lot Number:
+			</pr>
+			<BoxBicarb>
+				<p>
+					{bicarbLotNumber}
+				</p>
+			</BoxBicarb>
+			<pr>
+				Expiration Date
+			</pr>
+			<BoxBicarb>
+				<p>
+					{bicarbExpireDate}
+				</p>
+			</BoxBicarb>
+		{/if}
+	</div>
 </div>
 
 <style>

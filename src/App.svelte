@@ -2,8 +2,11 @@
 	import Hoverable from "./Hoverable.svelte";
 	import BoxAcid from "./BoxAcid.svelte";
 	import BoxBicarb from "./BoxBicarb.svelte";
+	import { onMount } from "svelte";
 	let qrCodeBicarb = "";
 	let qrCodeAcid = "";
+	let focusInput;
+	onMount(() => focusInput.focus());
 	$: acidMonth = qrCodeAcid.substring(20, 22);
 	$: acidDay = qrCodeAcid.substring(22, 24);
 	$: acidYear = 20 + qrCodeAcid.substring(18, 20);
@@ -17,7 +20,7 @@
 </script>
 
 <Hoverable let:hovering={activeAcid}>
-	<input class:activeAcid id='acid' autofocus bind:value={qrCodeAcid} placeholder="Scan Acid QR Code Here">
+	<input class:activeAcid id='acid' bind:this={focusInput} bind:value={qrCodeAcid} placeholder="Scan Acid QR Code Here">
 </Hoverable>
 
 {#if qrCodeAcid.length > 0}

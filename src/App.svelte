@@ -36,7 +36,7 @@
 {/if}
 
 <Hoverable let:hover={activeBicarb}>
-	<input class:activeBicarb id='bicarb' autofocus bind:value={qrCodeBicarb} placeholder="Scan Bicarb QR Code Here">
+	<input class:activeBicarb id='bicarb' bind:value={qrCodeBicarb} placeholder="Scan Bicarb QR Code Here">
 </Hoverable>
 
 {#if qrCodeBicarb.length > 0}

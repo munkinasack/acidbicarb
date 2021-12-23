@@ -3,7 +3,6 @@
 	import BoxAcid from "./BoxAcid.svelte";
 	import BoxBicarb from "./BoxBicarb.svelte";
 	import { onMount } from "svelte";
-	import { CopyButton } from "carbon-components-svelte";
 	let qrCodeBicarb = "";
 	let qrCodeAcid = "";
 	let focusInput;
@@ -30,13 +29,13 @@
 			<pr>Lot Number:</pr>
 			<BoxAcid>
 				<p>
-					{acidLotNumber}<CopyButton text={acidLotNumber} />
+					{acidLotNumber}
 				</p>
 			</BoxAcid>
 			<pr>Expiration Date</pr>
 			<BoxAcid>
 				<p>
-					{acidExpireDate}<CopyButton text={acidExpireDate} />
+					{acidExpireDate}
 				</p>
 			</BoxAcid>
 		{/if}
@@ -52,7 +51,7 @@
 			</pr>
 			<BoxBicarb>
 				<p>
-					{bicarbLotNumber}<CopyButton text={bicarbLotNumber} />
+					{bicarbLotNumber}
 				</p>
 			</BoxBicarb>
 			<pr>
@@ -60,7 +59,7 @@
 			</pr>
 			<BoxBicarb>
 				<p>
-					{bicarbExpireDate}<CopyButton text={bicarbExpireDate} />
+					{bicarbExpireDate}
 				</p>
 			</BoxBicarb>
 		{/if}

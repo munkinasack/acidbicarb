@@ -17,7 +17,7 @@
 </script>
 
 <Hoverable let:hovering={activeAcid}>
-	<input class:activeAcid id='acid' bind:value={qrCodeAcid} placeholder="Scan Acid QR Code Here">
+	<input class:activeAcid id='acid' autofocus bind:value={qrCodeAcid} placeholder="Scan Acid QR Code Here">
 </Hoverable>
 
 {#if qrCodeAcid.length > 0}
@@ -36,7 +36,7 @@
 {/if}
 
 <Hoverable let:hover={activeBicarb}>
-	<input class:activeBicarb id='bicarb' bind:value={qrCodeBicarb} placeholder="Scan Bicarb QR Code Here">
+	<input class:activeBicarb id='bicarb' autofocus bind:value={qrCodeBicarb} placeholder="Scan Bicarb QR Code Here">
 </Hoverable>
 
 {#if qrCodeBicarb.length > 0}
